@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title >Rezervari</title>
+<link rel="stylesheet" type="text/css" href="../.css/pagina5css.css">
+
+
+
+</head>
+
+
+<body>
+
+<nav>
+    
+	<p>Satul de vacanta Ciunget</p>
+	<ul class=meniu>
+	    <li><a href="pagina1.html">Prezentare</a></li>
+		<li><a href="#">Scurt istoric</a>
+		   <ul>
+		       <li><a href="pagina2.html">Ciunget</a></li>
+			   <li><a href="pagina3.html">Biserica</a></li>
+			   <li><a href="pagina4.html">Hidrocentrala</a></li>
+		   </ul>
+		</li>
+		<li><a href="#">Cazare</a></li>
+		<li><a href="#">Facebook</a>
+		    <ul>
+		       <li><a href="https://www.facebook.com/satul.ciungetu.1">Ciunget</a></li>
+			   <li><a href="https://www.facebook.com/lotrughp/">Hidrocentrala</a></li>
+			   <li><a href="https://www.facebook.com/StatiuneaVoineasa/">Voineasa</a></li>
+			   <li><a href="https://www.facebook.com/DescoperaVidra/">Partia Vidra</a></li>
+		   </ul></li>  
+		    
+		  
+	</ul>
+</nav>
+<br> <br> <br><br><br><br>
+<h1>Aveti posibilitatea sa faceti o rezervare online la una dintre pensiunile noastre</h1>
+<img src="../poze/pozaremmar1.jpg" alt="#" >
+<img src="../poze/pozaremmar2.png" alt="#" >
+
+<h2>Pentru a face o rezervare trebuie sa detineti un cont sau sa faceti o rezervare telefonica la numarul 0742660639</h2>
+
+<input type="text" placeholder="Adauga camera" id="numarcam">
+<button type="submit" onclick="selectcamera()">cauta camera</button>
+<p id="Infocamera"></p>
+
+<br>
+
+<input type="text" placeholder="Adauga numar camera" id="nrcamera">
+<input type="text" placeholder="adauga pret camera" id="pretcamera">
+<input type="text" placeholder="tipul de pat" id="tip_pat">
+<button type="submit" onclick="salveazacamera()">Salveaza camera</button>
+<br>
+
+<button type="submit" onclick="stergecamera()">Sterge ultima camera</button>
+
+<br><br>
+
+<button id="apare" onclick="timptrecut()" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+    </div>
+      
+    <div class="container">
+	  Ceas <p id="ceas"></p>
+	  <br>
+      <label for="uname"><b>Nume</b></label>
+      <input type="text" placeholder="Adauga nume" name="uname" required>
+       <br>
+      <label for="psw"><b>Parola</b></label>
+      <input type="password" placeholder="Adauga parola" name="psw" required>
+       <br>
+      <button type="submit" onclick="opresteceas()">Conectare</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Salveaza Parola
+      </label>
+	  <br>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Ai uitat <a href="#">parola?</a></span>
+    </div>
+  </form>
+</div>
+
+<h2>Daca doriti sa faceti un cont nou bifati casuta <input type="checkbox" id="myCheck"  onclick="myFunction()"></h2>
+
+
+<form  id="myBtn"  style="display:none">
+  <div class="container">
+    <h1>Inregistrare</h1>
+    <p>Toate campurile sunt obligatorii</p>
+    <hr>
+    <label for="uname"><b>Nume</b></label>
+    <input type="text" placeholder="Adauga nume" name="uname" required>
+	  <br>
+    <label for="email"><b>Email</b></label>
+    <input type="text"  placeholder="Adauga email" name="email" id = "email" required>
+     <br>
+    <label for="psw"><b>Parola</b></label>
+    <input type="password" placeholder="adauga parola" name="psw" required>
+     <br>
+    <label for="psw-repeat"><b>Repeta Parola</b></label>
+    <input type="password" placeholder="Repeta parola" name="psw-repeat" required>
+    
+	Varsta:
+	<div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    <p>Varsta: <span id="varsta"></span></p>
+    </div>
+	
+    <p>Prin crearea acestui cont sunteti de acord cu <a href="#">Termeni si conditii</a>.</p>
+	
+
+    <button type="submit" class="registerbtn" onclick="validare()">Inregistrare</button>
+  </div>
+  
+ 
+</form>
+
+<p>Cum vi s-a parut prezentarea</p>
+	 <form action="">
+     <input type="radio" name="gender" value="male"> Buna<br>
+     <input type="radio" name="gender" value="female"> Foarte Buna<br>
+     <input type="radio" name="gender" value="other"> Foarte proasta
+     </form>
+ <br><br>
+<br><br>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src = "../.js/javasc.js" type="text/javascript"></script>
+<script src = "https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity = "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin = "anonymous"></script>
+<script src = "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity = "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin = "anonymous" ></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity = "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin = "anonymous" ></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+</body>
+</html>
